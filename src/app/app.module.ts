@@ -9,6 +9,9 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { MapDisplayComponent } from './map-display/map-display.component';
+import 'rxjs/add/operator/map'
+
 
 export const firebaseConfig = {
   apiKey: firebaseKeyConfig.apiKey,
@@ -21,7 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MapDisplayComponent
   ],
   imports: [
     BrowserModule,
