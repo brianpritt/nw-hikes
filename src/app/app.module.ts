@@ -4,11 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { firebaseKeyConfig } from './api-key';
 import { AngularFireModule } from 'angularfire2';
+import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
+import { AuthGuard } from './auth.service';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { MessageBoardComponent } from './message-board/message-board.component';
+import { HikeDetailsComponent } from './hike-details/hike-details.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './signup/signup.component';
+import { EmailComponent } from './email/email.component';
+import { OtherComponent } from './members/members.component';
 
 export const firebaseConfig = {
   apiKey: firebaseKeyConfig.apiKey,
@@ -21,16 +31,24 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MessageBoardComponent,
+    HikeDetailsComponent,
+    LoginComponent,
+    ProfileComponent,
+    SignupComponent,
+    EmailComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
