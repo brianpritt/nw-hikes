@@ -14,7 +14,6 @@ export class MapServiceService {
         format: new ol.format.GPX()
       })
     });
-    console.log(vector);
     return vector;
   }
 
@@ -37,10 +36,6 @@ export class MapServiceService {
         zoom: 12
       })
     });
-  }
-
-  transformData(){
-    return this.http.post('http://ogre.adc4gis.com/convert', this.createData())
   }
 
 }
