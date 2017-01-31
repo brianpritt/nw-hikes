@@ -2,17 +2,34 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import * as ol from 'openlayers';
 
+
 @Injectable()
 export class MapServiceService {
 
   constructor(private http: Http) { }
 
+  createFirebase(){
+    var firebaseRef = firebase.database().ref('trails').push();
+  }
+
+  setStyle(){
+    var  style = new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#f4bf42',
+        width: 2
+      })
+    })
+    return style
+  }
+
+
   createData(){
     var vector = new ol.layer.Vector({
       source: new ol.source.Vector({
-        url: '../test.gpx',
-        format: new ol.format.GPX()
-      })
+        url: '../trail.json',
+        format: new ol.format.GeoJSON()
+      }),
+      style: this.setStyle()
     });
     return vector;
   }
@@ -21,7 +38,9 @@ export class MapServiceService {
     var map = new ol.Map({
       layers:[
         new ol.layer.Tile({
-          source: new ol.source.OSM()
+          source: new ol.source.Stamen({
+            layer: 'terrain'
+          })
         }),
         this.createData()
       ],
