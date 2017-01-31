@@ -1,3 +1,13 @@
+main {
+  flex: 1 0 auto;
+}
+
+#map{
+  height: 500px;
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+}
 
 .form-container {
     background:white;
@@ -8,13 +18,13 @@
     margin-left:-250px;
 }
 
-button {
+/*button {
     padding:1.2em;
     width:100%;
     cursor:pointer;
     margin-bottom:15px;
     font-size:1.3em;
-}
+}*/
 
 .basic-btn {
     background: #3B8598;
@@ -48,6 +58,7 @@ input.txt {
     font-size:.8em;
     color:#3B8598;
 }
+
 #goback span {
     font-size:1em;
 }
@@ -82,4 +93,5 @@ input.txt {
   100% {
     transform: rotate(360deg);
   }
+
 }

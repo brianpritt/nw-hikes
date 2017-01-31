@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MessageBoardComponent } from './message-board/message-board.component';
-import { LoginComponent } from './login/login.component';
+
 import { ProfileComponent } from './profile/profile.component';
 import { HikesListComponent } from './hikes-list/hikes-list.component';
 import { HikeDetailsComponent } from './hike-details/hike-details.component';
@@ -22,10 +22,6 @@ const appRoutes = [
   {
     path:'message-board',
     component: MessageBoardComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
   {
     path: 'profile',
