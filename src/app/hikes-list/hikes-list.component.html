@@ -1,10 +1,11 @@
-<app-map-display></app-map-display>  
+<app-map-display></app-map-display>
 <div class="trails-list">
   <div class="row-one">
     <div *ngFor="let trail of trails | async">
       <div class="hikes-list">
         <h3 (click)="goToDetailPage(trail)"><span>{{trail.name}}</span></h3>
-        <p>{{trail.description}}</p>
+        <h5>{{trail.intro}}</h5>
+        <hr>
       </div>
     </div>
     <div>
