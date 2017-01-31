@@ -9,27 +9,8 @@ import { AuthGuard } from '../auth.service'
   providers: [MemberService]
 })
 export class HomeComponent implements OnInit {
+constructor(private memberService: MemberService) {}
 
-<<<<<<< HEAD
-  constructor(private auth: AuthGuard) { }
-=======
-
-
-
-  constructor(private memberService: MemberService) { }
->>>>>>> cc136783f8eab19c4592700966f39a622b163a8c
-    callMemberService(){
-        // console.log("output")
-        // console.log(this.auth)
-        // this.af.auth.subscribe(auth => {
-        //   if(auth) {
-        //     console.log(this.af.auth)
-        //   } else {
-        //     console.log("not")
-        //   }
-        // });
-      }
   ngOnInit() {
-  }
-
+ }
 }

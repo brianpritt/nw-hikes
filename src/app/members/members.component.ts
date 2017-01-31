@@ -22,9 +22,7 @@ export class OtherComponent implements OnInit {
         this.name = auth;
       }
     });
-
   }
-
   logout() {
      this.af.auth.logout();
      console.log('logged out');
