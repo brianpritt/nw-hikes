@@ -38,10 +38,6 @@ export const firebaseConfig = {
     MapDisplayComponent,
     MessageBoardComponent,
     HikeDetailsComponent,
-<<<<<<< HEAD
-=======
-    // LoginComponent,
->>>>>>> da8a5ee2f1e5a30fd1b2adba8640d3a0fe99618f
     ProfileComponent,
     SignupComponent,
     EmailComponent,
