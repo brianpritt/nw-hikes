@@ -19,6 +19,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 import { OtherComponent } from './members/members.component';
+import { HikesListComponent } from './hikes-list/hikes-list.component';
 
 export const firebaseConfig = {
   apiKey: firebaseKeyConfig.apiKey,
@@ -38,7 +39,8 @@ export const firebaseConfig = {
     ProfileComponent,
     SignupComponent,
     EmailComponent,
-    OtherComponent
+    OtherComponent,
+    HikesListComponent
   ],
   imports: [
     BrowserModule,
