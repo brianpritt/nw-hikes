@@ -1,14 +1,14 @@
-<div class="trail-details">
+<div class="hike-details">
   <img src="{{(trailToDisplay | async)?.picture}}" alt="Photo of trail">
   <h3>{{(trailToDisplay | async)?.name}}</h3>
   <!-- <h5>{{(trailToDisplay | async)?.intro}}</h5> -->
   <p>
-    Region: {{(trailToDisplay | async)?.region}}<br>
-    Difficulty: {{(trailToDisplay | async)?.difficulty}}<br>
+    Region: <span class="heavy">{{(trailToDisplay | async)?.region}}</span><br>
+    Difficulty: <span class="heavy">{{(trailToDisplay | async)?.difficulty}}</span><br>
     <!-- Elevation gain: {{(trailToDisplay | async)?.elevation}}<br> -->
-    Distance: {{(trailToDisplay | async)?.length}}<br>
+    Distance: <span class="heavy">{{(trailToDisplay | async)?.length}}</span><br>
   </p>
-  Details <br>
+  <span class="heavy">Details</span> <br>
   <p>{{(trailToDisplay | async)?.description}}</p><br>
   Location: {{(trailToDisplay | async)?.trailhead-location}}
 </div>

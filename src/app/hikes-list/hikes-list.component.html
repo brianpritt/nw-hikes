@@ -2,8 +2,8 @@
 <div class="trails-list">
   <div class="row-one">
     <div *ngFor="let trail of trails | async">
-      <div>
-        <h3 (click)="goToDetailPage(trail)">{{trail.name}}</h3>
+      <div class="hikes-list">
+        <h3 (click)="goToDetailPage(trail)"><span>{{trail.name}}</span></h3>
         <p>{{trail.description}}</p>
       </div>
     </div>
