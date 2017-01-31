@@ -10,7 +10,9 @@ export class MemberService {
     console.log(this.af)
     this.af.auth.subscribe(auth => {
       if(auth) {
-        console.log("auth")
+        console.log(this.af.auth)
+      } else {
+        console.log("not")
       }
     });
   }

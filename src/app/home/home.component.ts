@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../member.service';
+import { AuthGuard } from '../auth.service'
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,18 @@ import { MemberService } from '../member.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private memberService: MemberService) { }
+  constructor(private auth: AuthGuard) { }
     callMemberService(){
-      this.memberService.memberOutput();
-      console.log("member")
-    }
+        console.log("output")
+        console.log(this.af)
+        this.af.auth.subscribe(auth => {
+          if(auth) {
+            console.log(this.af.auth)
+          } else {
+            console.log("not")
+          }
+        });
+      }
   ngOnInit() {
   }
 
