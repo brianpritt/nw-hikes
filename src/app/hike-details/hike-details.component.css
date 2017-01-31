@@ -1,0 +1,13 @@
+div.hike-details {
+  margin-top: 25px;
+}
+
+div.hike-details img {
+  width: 400px;
+  float: right;
+  margin-left: 15px;
+}
+
+div.hike-details span.heavy {
+  font-weight: 600;
+}
