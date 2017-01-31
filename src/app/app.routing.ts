@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { MessageBoardComponent } from './message-board/message-board.component';
 
 import { ProfileComponent } from './profile/profile.component';
+import { HikesListComponent } from './hikes-list/hikes-list.component';
+import { HikeDetailsComponent } from './hike-details/hike-details.component';
 
 import { OtherComponent } from './members/members.component';
 import { AuthGuard } from './auth.service';
@@ -27,7 +29,9 @@ const appRoutes = [
   },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
-  { path: 'members', component: OtherComponent, canActivate: [AuthGuard] }
+  { path: 'members', component: OtherComponent, canActivate: [AuthGuard] },
+  { path: 'hikes-list', component: HikesListComponent },
+  { path: 'hike-details', component: HikeDetailsComponent }
 
 
  ];
