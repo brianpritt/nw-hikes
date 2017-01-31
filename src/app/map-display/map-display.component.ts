@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapServiceService } from '../map-service.service';
 
+
 @Component({
   selector: 'app-map-display',
   templateUrl: './map-display.component.html',
@@ -8,6 +9,8 @@ import { MapServiceService } from '../map-service.service';
   providers: [MapServiceService]
 })
 export class MapDisplayComponent implements OnInit {
+
+
 
   constructor(private mapService: MapServiceService) { }
 

@@ -9,6 +9,9 @@ import { MemberService } from '../member.service';
 })
 export class HomeComponent implements OnInit {
 
+
+
+
   constructor(private memberService: MemberService) { }
     callMemberService(){
       this.memberService.memberOutput();

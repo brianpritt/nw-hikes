@@ -2,12 +2,12 @@ main {
   flex: 1 0 auto;
 }
 
-#map{
+/*#map{
   height: 300px;
   width: 90%;
   margin: auto;
   margin-top: 20px;
-}
+}*/
 
 .form-container {
     background:white;

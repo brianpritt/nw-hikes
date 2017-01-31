@@ -27,7 +27,6 @@ const appRoutes = [
   { path: 'hikes-list', component: HikesListComponent },
   { path: 'hike-details', component: HikeDetailsComponent }
 
-
  ];
 
 
