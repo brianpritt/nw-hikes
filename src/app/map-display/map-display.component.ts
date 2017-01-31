@@ -13,12 +13,6 @@ export class MapDisplayComponent implements OnInit {
 
   ngOnInit() {
     this.mapService.initializeMap();
-    // this.mapService.transformData().subscribe(
-    //   (data) => {
-    //     console.log(data);
-    //   }
-    // );
-    this.mapService.createData();
   }
 
 
