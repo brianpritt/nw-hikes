@@ -1,9 +1,9 @@
 main {
-  flex: 1 0 auto;
+  /*flex: 1 0 auto;*/
 }
 
 #map{
-  height: 500px;
+  height: 100px;
   width: 75%;
   margin: auto;
   margin-top: 20px;
@@ -25,11 +25,6 @@ main {
     margin-bottom:15px;
     font-size:1.3em;
 }*/
-
-.basic-btn {
-    background: #3B8598;
-    color:white;
-}
 
 input.txt {
     background:#fff !important;

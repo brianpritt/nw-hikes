@@ -1,19 +1,26 @@
 import { Injectable } from '@angular/core';
-import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
+import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class MemberService {
+  members: FirebaseListObservable<any[]>;
+  private currentUser;
 
-  constructor(public af: AngularFire) {}
-  memberOutput(){
-    console.log("output")
-    console.log(this.af)
-    this.af.auth.subscribe(auth => {
-      if(auth) {
-        console.log(this.af.auth)
-      } else {
-        console.log("not")
-      }
-    });
+  constructor(private angularFire: AngularFire){
+    this.members = angularFire.database.list('members');
+  }
+  getMembers(){
+    return this.members;
+  }
+  addNewUser(newUser){
+    this.members.push(newUser);
+    this.setUser(newUser);
+  }
+  setUser(newUser){
+    this.currentUser = newUser;
+    console.log(this.currentUser)
+  }
+  getCurrentUser(){
+    return this.currentUser;
   }
 }

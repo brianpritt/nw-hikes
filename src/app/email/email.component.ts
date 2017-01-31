@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
+import { MemberService } from '../member.service';
 import { moveIn, fallIn } from '../router.animations';
 
 @Component({
@@ -8,15 +9,16 @@ import { moveIn, fallIn } from '../router.animations';
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
   animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
+  host: {'[@moveIn]': ''},
+  providers: [MemberService]
 })
 
 
 export class EmailComponent implements OnInit {
   state: string = '';
-      error: any;
+  error: any;
 
-      constructor(public af: AngularFire,private router: Router) {
+      constructor(public af: AngularFire,private router: Router, private memberService: MemberService) {
       this.af.auth.subscribe(auth => {
         if(auth) {
           this.router.navigateByUrl('/members');
@@ -37,6 +39,7 @@ export class EmailComponent implements OnInit {
         }).then(
           (success) => {
           console.log(success);
+          this.memberService.setUser(formData.value.email)
           this.router.navigate(['/members']);
         }).catch(
           (err) => {

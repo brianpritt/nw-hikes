@@ -28,7 +28,7 @@ export class OtherComponent implements OnInit {
   logout() {
      this.af.auth.logout();
      console.log('logged out');
-     this.router.navigateByUrl('/login');
+     this.router.navigateByUrl('/login-email');
   }
 
 
