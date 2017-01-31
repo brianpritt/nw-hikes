@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MessageBoardComponent } from './message-board/message-board.component';
-import { LoginComponent } from './login/login.component';
+
 import { ProfileComponent } from './profile/profile.component';
 
 import { OtherComponent } from './members/members.component';
@@ -22,16 +22,8 @@ const appRoutes = [
     component: MessageBoardComponent
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
     path: 'profile',
     component: ProfileComponent
-  },
-  {
-    path: 'login',
-    component:LoginComponent
   },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },

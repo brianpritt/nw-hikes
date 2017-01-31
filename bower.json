@@ -3,12 +3,15 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/brianpritt/nw-hikes",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
+  ],
+  "authors": [
+    "Brian Pritt <brianpritt@gmail.com>"
   ]
 }
