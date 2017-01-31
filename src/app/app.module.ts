@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 import { AuthGuard } from './auth.service';
+import { MemberService} from './member.service'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -52,7 +53,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
 
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

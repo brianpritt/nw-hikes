@@ -5,8 +5,7 @@ import { MemberService} from '../member.service'
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
-  providers: [MemberService]
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
 
@@ -14,6 +13,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.memberService.getCurrentUser());
+    console.log(this.memberService.getMembers());
   }
 
 }
