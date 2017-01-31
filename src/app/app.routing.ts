@@ -17,14 +17,8 @@ import { EmailComponent } from './email/email.component';
 const appRoutes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  {
-    path:'message-board',
-    component: MessageBoardComponent
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent
-  },
+  {path:'message-board',component: MessageBoardComponent},
+  {path: 'profile',component: ProfileComponent},
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
   { path: 'members', component: OtherComponent, canActivate: [AuthGuard] }
