@@ -31,7 +31,7 @@ const appRoutes = [
   { path: 'login-email', component: EmailComponent },
   { path: 'members', component: OtherComponent, canActivate: [AuthGuard] },
   { path: 'hikes-list', component: HikesListComponent },
-  { path: 'hike-details', component: HikeDetailsComponent }
+  { path: 'trails/:id', component: HikeDetailsComponent }
 
 
  ];
