@@ -1,4 +1,6 @@
-//from  https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebaseimport { CanActivate, Router } from '@angular/router';
+//from  https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebase
+//Protects the members section of the website
+
 import { AngularFireAuth } from "angularfire2/angularfire2";
 import { CanActivate, Router } from '@angular/router';
 import { Injectable } from "@angular/core";
