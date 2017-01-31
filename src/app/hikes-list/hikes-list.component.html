@@ -1,8 +1,8 @@
 <div class="hikes-list">
   <div class="row-one">
-    <div *ngFor="let hike of hikes |async">
+    <div *ngFor="let hike of hikes | async">
       <div>
-        <h3 (click)="got ToDetailPage(hike)">{{hike.name}}</h3>
+        <h3 (click)="goToDetailPage(hike)">{{hike.name}}</h3>
         <p>{{hike.intro}}</p>
       </div>
     </div>

@@ -1,3 +1,13 @@
-<p>
-  hike-details works!
-</p>
+<div class="hike-details">
+  <img src="{{(hikeToDisplay | async)?.image}}" alt="Photo of hike">
+  <h3>{{(hikeToDisplay | async)?.name}}</h3>
+  <h5>{{(hikeToDisplay | async)?.intro}}</h5>
+  <p>
+    Region: {{(hikeToDisplay | async)?.region}}<br>
+    Difficulty: {{(hikeToDisplay | async)?.difficulty}}<br>
+    Elevation gain: {{(hikeToDisplay | async)?.elevation}}<br>
+    Distance: {{(hikeToDisplay | async)?.miles}}<br>
+  </p>
+  Details <br>
+  <p>{{(hikeToDisplay | async)?.details}}</p>
+</div>
