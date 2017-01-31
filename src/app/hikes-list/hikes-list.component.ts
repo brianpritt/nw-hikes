@@ -3,28 +3,28 @@ import { Router } from '@angular/router';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
-import { HikeService } from '../hike.service';
-import { Hike } from '../hike.model';
+import { TrailService } from '../trail.service';
+import { Trail } from '../trail.model';
 
 
 @Component({
   selector: 'app-hikes-list',
   templateUrl: './hikes-list.component.html',
   styleUrls: ['./hikes-list.component.css'],
-  providers: [HikeService]
+  providers: [TrailService]
 })
 export class HikesListComponent implements OnInit {
-  hikes: FirebaseListObservable<any[]>;
+  trails: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private hikeService: HikeService) { }
+  constructor(private router: Router, private trailService: TrailService) { }
 
   ngOnInit() {
-    this.hikes = this.hikeService.getHikes();
+    this.trails = this.trailService.getTrails();
   }
 
-  goToDetailPage(clickedHike) {
-    this.router.navigate(['hikes', clickedHike.$key]);
+  goToDetailPage(clickedTrail) {
+    this.router.navigate(['trails', clickedTrail.$key]);
   }
 
 }

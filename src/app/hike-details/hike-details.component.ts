@@ -4,30 +4,30 @@ import { Location } from '@angular/common';
 
 import { FirebaseObjectObservable } from 'angularfire2';
 
-import { HikeService } from '../hike.service';
-import { Hike } from '../hike.model';
+import { TrailService } from '../trail.service';
+import { Trail } from '../trail.model';
 
 @Component({
   selector: 'app-hike-details',
   templateUrl: './hike-details.component.html',
   styleUrls: ['./hike-details.component.css'],
-  providers: [HikeService]
+  providers: [TrailService]
 })
 export class HikeDetailsComponent implements OnInit {
-  hikeId: string;
-  hikeToDisplay;
+  trailId: string;
+  trailToDisplay;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private hikeService: HikeService
+    private trailService: TrailService
   ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.hikeId = urlParameters['id'];
+      this.trailId = urlParameters['id'];
     });
-    this.hikeToDisplay = this.hikeService.getHikeById(this.hikeId);
+    this.trailToDisplay = this.trailService.getTrailById(this.trailId);
   }
 
 }
