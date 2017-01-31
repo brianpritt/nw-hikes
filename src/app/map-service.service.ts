@@ -16,7 +16,7 @@ export class MapServiceService {
     var  style = new ol.style.Style({
       stroke: new ol.style.Stroke({
         color: '#f4bf42',
-        width: 2
+        width: 0.7
       })
     })
     return style
@@ -51,8 +51,8 @@ export class MapServiceService {
           })
       }),
       view: new ol.View({
-        center: [-13655693.8492,5704304.21906],
-        zoom: 12
+        center: [-13548593.9237,5677830.15763],
+        zoom: 8
       })
     });
   }

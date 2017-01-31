@@ -16,7 +16,10 @@ import 'rxjs/add/operator/map'
 
 import { MessageBoardComponent } from './message-board/message-board.component';
 import { HikeDetailsComponent } from './hike-details/hike-details.component';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc136783f8eab19c4592700966f39a622b163a8c
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
@@ -39,7 +42,10 @@ export const firebaseConfig = {
     MapDisplayComponent,
     MessageBoardComponent,
     HikeDetailsComponent,
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc136783f8eab19c4592700966f39a622b163a8c
     ProfileComponent,
     SignupComponent,
     EmailComponent,

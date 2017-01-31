@@ -10,7 +10,14 @@ import { AuthGuard } from '../auth.service'
 })
 export class HomeComponent implements OnInit {
 
+<<<<<<< HEAD
   constructor(private auth: AuthGuard) { }
+=======
+
+
+
+  constructor(private memberService: MemberService) { }
+>>>>>>> cc136783f8eab19c4592700966f39a622b163a8c
     callMemberService(){
         // console.log("output")
         // console.log(this.auth)
