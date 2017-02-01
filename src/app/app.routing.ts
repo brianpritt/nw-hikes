@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HikesListComponent } from './hikes-list/hikes-list.component';
 import { HikeDetailsComponent } from './hike-details/hike-details.component';
 import { NewTrailComponent } from './new-trail/new-trail.component';
+import { EditTrailComponent } from './edit-trail/edit-trail.component';
 
 import { OtherComponent } from './members/members.component';
 import { AuthGuard } from './auth.service';
@@ -27,7 +28,8 @@ const appRoutes = [
   { path: 'members', component: OtherComponent, canActivate: [AuthGuard] },
   { path: 'hikes-list', component: HikesListComponent },
   { path: 'trails/:id', component: HikeDetailsComponent },
-  { path: 'new-trail', component: NewTrailComponent }
+  { path: 'new-trail', component: NewTrailComponent },
+  { path: 'edit-trail', component: EditTrailComponent }
 
  ];
 

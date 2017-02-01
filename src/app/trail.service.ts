@@ -21,4 +21,23 @@ export class TrailService {
   addTrail(newTrail: Trail) {
     this.trails.push(newTrail);
   }
+
+  updateTrail(updatedTrail) {
+    var trailInFirebase = this.getTrailById(updatedTrail.$key);
+    trailInFirebase.update({name: updatedTrail.name,
+                            elevation: updatedTrail.elevation,
+                            region: updatedTrail.region,
+                            lat: updatedTrail.lat,
+                            long: updatedTrail.long,
+                            intro: updatedTrail.intro,
+                            description: updatedTrail.description,
+                            length: updatedTrail.length,
+                            difficulty: updatedTrail.difficulty,
+                            picture: updatedTrail.picture});
+  }
+
+  deleteTrail(trailToDelete) {
+    var trailInFirebase = this.getTrailById(trailToDelete.$key);
+    trailInFirebase.remove();
+  }
 }

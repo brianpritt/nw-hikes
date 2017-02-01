@@ -1,0 +1,55 @@
+<h2>Edit trail</h2>
+<div class="row">
+  <div class="input-field col s12">
+    <label>Edit trail name</label><br>
+    <input [(ngModel)]="selectedTrail.name">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail elevation gain</label><br>
+    <input [(ngModel)]="selectedTrail.elevation">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail region</label><br>
+    <input [(ngModel)]="selectedTrail.region">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail latitude</label><br>
+    <input [(ngModel)]="selectedTrail.lat">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail longitude</label><br>
+    <input [(ngModel)]="selectedTrail.long">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail intro teaser</label><br>
+    <input [(ngModel)]="selectedTrail.intro">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail description</label><br>
+    <input [(ngModel)]="selectedTrail.description">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail length</label><br>
+    <input [(ngModel)]="selectedTrail.length">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail difficulty</label><br>
+    <input [(ngModel)]="selectedTrail.difficulty">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail picture URL</label><br>
+    <input [(ngModel)]="selectedTrail.picture">
+  </div>
+
+  <button class="btn" (click)="updateTrail(selectedTrail)">Update</button>
+  <button class="btn" (click)="deleteTrail(selectedTrail)">Delete</button>
+</div>
