@@ -11,8 +11,6 @@
     Distance: <span class="heavy">{{trailToDisplay?.length}}</span><br>
   </p>
   <span class="heavy">Details</span> <br>
-  <p>{{(trailToDisplay | async)?.description}}</p><br>
-  Location: {{(trailToDisplay | async)?.trailhead-location}}
+  <p>{{trailToDisplay?.description}}</p><br>
   <app-comments></app-comments>
-
 </div>

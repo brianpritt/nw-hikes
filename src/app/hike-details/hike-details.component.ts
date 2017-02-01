@@ -17,6 +17,8 @@ import { Trail } from '../trail.model';
 export class HikeDetailsComponent implements OnInit {
   trailId: string;
   trailToDisplay;
+  x: number;
+  y: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,9 +33,10 @@ export class HikeDetailsComponent implements OnInit {
     });
     this.trailService.getTrailById(this.trailId).subscribe(data => {
       this.trailToDisplay = data;
-      console.log(this.trailToDisplay.trailhead_location)
+      this.x = this.trailToDisplay.long;
+      this.y = this.trailToDisplay.lat;
+      this.mapService.initializeMap(this.x,this.y,13);
     });
-    this.mapService.initializeMap();
 
   }
 

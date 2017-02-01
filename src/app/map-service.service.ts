@@ -8,10 +8,10 @@ export class MapServiceService {
 
   constructor(private http: Http) { }
 
-  createPin(){
+  createPin(x, y){
+    //console.log("going into create pin: " + x, y)
     var iconFeature = new ol.Feature({
-      geometry: new ol.geom.Point([-13548593.9237,5677830.15763]),
-      name: 'Null Island',
+      geometry: new ol.geom.Point([x,y]),
       population: 4000,
       rainfall: 500
     });
@@ -47,7 +47,7 @@ export class MapServiceService {
     return vector;
   }
 
-  initializeMap(){
+  initializeMap(x,y,z){
     var map = new ol.Map({
       layers:[
         new ol.layer.Tile({
@@ -56,7 +56,7 @@ export class MapServiceService {
           })
         }),
         this.createData(),
-        this.createPin()
+        this.createPin(x,y)
       ],
       target: 'map',
       controls: ol.control.defaults({
@@ -65,10 +65,11 @@ export class MapServiceService {
           })
       }),
       view: new ol.View({
-        center: [-13548593.9237,5677830.15763],
-        zoom: 8
+        center: [x,y],
+        zoom: z
       })
     });
   }
+  //-13548593.9237,5677830.15763
 
 }
