@@ -11,16 +11,15 @@ export class MapServiceService {
   createPin(x, y){
     //console.log("going into create pin: " + x, y)
     var iconFeature = new ol.Feature({
-      geometry: new ol.geom.Point([x,y]),
-      population: 4000,
-      rainfall: 500
+      geometry: new ol.geom.Point([x,y])
     });
 
     var pinSource = new ol.source.Vector({
       features: [iconFeature]
     });
     var pinLayer = new ol.layer.Vector({
-      source: pinSource
+      source: pinSource,
+      maxResolution: 500
     });
     return pinLayer
   }
