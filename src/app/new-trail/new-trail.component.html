@@ -1,3 +1,58 @@
-<p>
-  new-trail works!
-</p>
+<div>
+  <h2>Add a new trail</h2>
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="name">Name</label><br>
+      <input #name placeholder="Name" id="name" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="elevation">Elevation</label><br>
+      <input #elevation placeholder="Elevation" id="elevation" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="region">Region</label><br>
+      <input #region placeholder="Region" id="region" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="lat">Trailhead latitude</label><br>
+      <input #lat placeholder="Trailhead latitude" id="lat" type="number" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="long">Trailhead longitude</label><br>
+      <input #long placeholder="Trailhead longitude" id="long" type="number" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="intro">Intro teaser</label><br>
+      <input #intro placeholder="Intro" id="intro" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="description">Description</label><br>
+      <textarea #description placeholder="Description" id="description" type="text" class="validate materialize-textarea"></textarea>
+    </div>
+
+    <div class="input-field col s12">
+      <label for="length">Length</label><br>
+      <input #length placeholder="Length" id="length" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="difficulty">Difficulty</label><br>
+      <input #difficulty placeholder="Difficulty" id="difficulty" type="text" class="validate">
+    </div>
+
+    <div class="input-field col s12">
+      <label for="picture">Image URL</label><br>
+      <input #picture placeholder="Image URL" id="picture" type="text" class="validate">
+    </div>
+
+    <button class="btn" (click)="submitForm(name.value, elevation.value, region.value, lat.value, long.value, intro.value, description.value, length.value, difficulty.value,  picture.value); name.value=''; elevation.value=''; region.value=''; lat.value=''; long.value=''; intro.value=''; description.value=''; length.value=''; difficulty.value=''; picture.value=''">Add hike</button>
+
+  </div>
+
+</div>
