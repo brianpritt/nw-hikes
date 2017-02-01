@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { MapServiceService } from '../map-service.service';
 
 import { FirebaseObjectObservable } from 'angularfire2';
 
@@ -11,7 +12,7 @@ import { Trail } from '../trail.model';
   selector: 'app-hike-details',
   templateUrl: './hike-details.component.html',
   styleUrls: ['./hike-details.component.css'],
-  providers: [TrailService]
+  providers: [TrailService, MapServiceService]
 })
 export class HikeDetailsComponent implements OnInit {
   trailId: string;
@@ -20,7 +21,8 @@ export class HikeDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private trailService: TrailService
+    private trailService: TrailService,
+    private mapService: MapServiceService
   ) { }
 
   ngOnInit() {
@@ -28,6 +30,8 @@ export class HikeDetailsComponent implements OnInit {
       this.trailId = urlParameters['id'];
     });
     this.trailToDisplay = this.trailService.getTrailById(this.trailId);
+    this.mapService.initializeMap();
+
   }
 
 }

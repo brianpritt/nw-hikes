@@ -1,4 +1,5 @@
 <div class="hike-details">
+  <div id="map"></div>
   <img src="{{(trailToDisplay | async)?.picture}}" alt="Photo of trail">
   <h3>{{(trailToDisplay | async)?.name}}</h3>
   <!-- <h5>{{(trailToDisplay | async)?.intro}}</h5> -->
@@ -10,5 +11,5 @@
   </p>
   <span class="heavy">Details</span> <br>
   <p>{{(trailToDisplay | async)?.description}}</p><br>
-  Location: {{(trailToDisplay | async)?.trailhead-location}}
+  Location: {{(trailToDisplay | async)?.trailhead_location}}
 </div>
