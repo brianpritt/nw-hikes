@@ -1,6 +1,10 @@
 <hr>
 <h3>Comments</h3>
+<h4>This is an H4{{(routeComments | async )?}}</h4>
+<div *ngFor="let comment of routeComments">
+    <h3>{{comment.body}} !!</h3>
+</div>
 <hr>
 <input #comment placeholder="Add Comment">
 <button (click)='newComment()'>Submit</button>
-<button (click)='getComments()'>log</button>
+<button (click)="whatisroutecomments()">log</button>
