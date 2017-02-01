@@ -25,6 +25,8 @@ import { HikesListComponent } from './hikes-list/hikes-list.component';
 import { CommentsComponent } from './comments/comments.component';
 import { NewTrailComponent } from './new-trail/new-trail.component';
 import {CommentPipe} from './comment.pipe';
+import { EditTrailComponent } from './edit-trail/edit-trail.component';
+
 
 
 
@@ -50,7 +52,8 @@ export const firebaseConfig = {
     HikesListComponent,
     CommentsComponent,
     NewTrailComponent,
-    CommentPipe
+    CommentPipe,
+    EditTrailComponent
   ],
   imports: [
     BrowserModule,

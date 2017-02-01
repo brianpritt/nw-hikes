@@ -6,6 +6,7 @@ import { MapServiceService } from '../map-service.service';
 import { FirebaseObjectObservable } from 'angularfire2';
 
 import { TrailService } from '../trail.service';
+import { MemberService } from '../member.service';
 import { Trail } from '../trail.model';
 
 @Component({
@@ -17,12 +18,15 @@ import { Trail } from '../trail.model';
 export class HikeDetailsComponent implements OnInit {
   trailId: string;
   trailToDisplay;
+  x: number;
+  y: number;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private trailService: TrailService,
-    private mapService: MapServiceService
+    private mapService: MapServiceService,
+    private memberService: MemberService
   ) { }
 
   ngOnInit() {
@@ -31,9 +35,10 @@ export class HikeDetailsComponent implements OnInit {
     });
     this.trailService.getTrailById(this.trailId).subscribe(data => {
       this.trailToDisplay = data;
-      console.log(this.trailToDisplay.trailhead_location)
+      this.x = this.trailToDisplay.long;
+      this.y = this.trailToDisplay.lat;
+      this.mapService.initializeMap(this.x,this.y,13);
     });
-    this.mapService.initializeMap();
 
   }
 

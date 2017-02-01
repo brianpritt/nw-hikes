@@ -7,12 +7,17 @@
   <p>
     Region: <span class="heavy">{{trailToDisplay?.region}}</span><br>
     Difficulty: <span class="heavy">{{trailToDisplay?.difficulty}}</span><br>
-    <!-- Elevation gain: {{(trailToDisplay | async)?.elevation}}<br> -->
+    Elevation gain: {{trailToDisplay?.elevation}}<br>
     Distance: <span class="heavy">{{trailToDisplay?.length}}</span><br>
   </p>
   <span class="heavy">Details</span> <br>
-  <p>{{(trailToDisplay | async)?.description}}</p><br>
-  Location: {{(trailToDisplay | async)?.trailhead-location}}
+  <p>{{trailToDisplay?.description}}</p><br>
+  <p>Latitude: {{trailToDisplay?.lat}}, Longitude: {{trailToDisplay?.long}}</p>
   <app-comments></app-comments>
+
+  <hr>
+  <!-- <div *ngIf="(memberService.getCurrentUser())"> -->
+    <app-edit-trail [selectedTrail]="trail"></app-edit-trail>
+  <!-- </div> -->
 
 </div>
