@@ -2,19 +2,6 @@ main {
   /*flex: 1 0 auto;*/
 }
 
-<<<<<<< HEAD
-#map{
-  height: 100px;
-  width: 75%;
-=======
-/*#map{
-  height: 300px;
-  width: 90%;
->>>>>>> cc136783f8eab19c4592700966f39a622b163a8c
-  margin: auto;
-  margin-top: 20px;
-}*/
-
 .form-container {
     background:white;
     padding:3.5em;

@@ -1,0 +1,9 @@
+div.about {
+  margin-top: 50px;
+}
+
+div.about span {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
