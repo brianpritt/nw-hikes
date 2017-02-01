@@ -29,7 +29,10 @@ export class HikeDetailsComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.trailId = urlParameters['id'];
     });
-    this.trailToDisplay = this.trailService.getTrailById(this.trailId);
+    this.trailService.getTrailById(this.trailId).subscribe(data => {
+      this.trailToDisplay = data;
+      console.log(this.trailToDisplay.trailhead_location)
+    });
     this.mapService.initializeMap();
 
   }
