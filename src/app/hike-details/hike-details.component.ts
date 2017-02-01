@@ -6,6 +6,7 @@ import { MapServiceService } from '../map-service.service';
 import { FirebaseObjectObservable } from 'angularfire2';
 
 import { TrailService } from '../trail.service';
+import { MemberService } from '../member.service';
 import { Trail } from '../trail.model';
 
 @Component({
@@ -22,7 +23,8 @@ export class HikeDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private trailService: TrailService,
-    private mapService: MapServiceService
+    private mapService: MapServiceService,
+    private memberService: MemberService
   ) { }
 
   ngOnInit() {

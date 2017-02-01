@@ -14,5 +14,9 @@
   <p>{{trailToDisplay?.description}}</p><br>
   Latitude: {{trailToDisplay?.lat}}, Longitude: {{trailToDisplay?.long}}
   <app-comments></app-comments>
+  <hr>
+  <!-- <div *ngIf="(memberService.getCurrentUser())"> -->
+    <app-edit-trail [selectedTrail]="trail"></app-edit-trail>
+  <!-- </div> -->
 
 </div>

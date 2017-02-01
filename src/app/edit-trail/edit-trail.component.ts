@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 import { TrailService } from '../trail.service';
+import { MemberService } from '../member.service';
 import { Trail } from '../trail.model';
 
 @Component({
@@ -15,7 +16,8 @@ import { Trail } from '../trail.model';
 export class EditTrailComponent implements OnInit {
   @Input() selectedTrail;
 
-  constructor(private trailService: TrailService) { }
+  constructor(private trailService: TrailService, 
+              private memberService: MemberService) { }
 
   ngOnInit() {
   }
