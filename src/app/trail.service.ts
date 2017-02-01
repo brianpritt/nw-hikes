@@ -17,4 +17,8 @@ export class TrailService {
   getTrailById(trailId: string) {
     return this.angularFire.database.object('/trails/' + trailId);
   }
+
+  addTrail(newTrail: Trail) {
+    this.trails.push(newTrail);
+  }
 }
