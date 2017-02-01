@@ -55,5 +55,27 @@
     "userEmail": "bradpitt@gmail.com",
     "userName": "bradpitt"
     }
+  ],
+  "comments":[{
+    "title": "McNeil point for the win",
+    "body": "I hiked this last March and there was still a little snow left.  It made for some unsure footing, but We made it to the shelter.  For those who are wondering, yes you can go up just a little bit higher and get between the glaciers, but it will add a few hours to the hike",
+    "hikeId": 0,
+    "user" : 0,
+    "date" :"12/26/2016"
+  },
+  {
+    "title": "McNeil point sucks",
+    "body": "Don't waste your time, its too crowded!",
+    "hikeId": 0,
+    "user" : "KbqtlcxblmywRlVPNdX",
+    "date" :"12/26/2016"
+  },
+  {
+    "title": "Coyote Wall is too windy",
+    "body": "Make sure you bring a jacket, it is a very exposed vista.  Also, there are mountain bikes riding around, so be mindful",
+    "hikeId": 1,
+    "user" : "KbqtlcxblmywRlVPNdX",
+    "date" :"12/26/2016"
+  }
   ]
 }
