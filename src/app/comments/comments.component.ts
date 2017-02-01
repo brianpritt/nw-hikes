@@ -26,39 +26,12 @@ export class CommentsComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.routeId = urlParameters['id'];
     });
-    this.todisplay = this.commentsService.getComments().subscribe(data=>{this.todisplay = data; console.log(this.todisplay);
+    this.todisplay = this.commentsService.getComments().subscribe(data=>{this.todisplay = data;
 
-
-    // for(var i = 0; i<this.todisplay.length; i++){
-    //   console.log(this.todisplay[i].hikeId);
-    //   console.log(this.routeId);
-    //   if(this.todisplay[i].hikeId == this.routeId){
-    //     this.routeComments.push(this.todisplay[i]);
-    //     console.log("push");
-    //   }
-    //   console.log(this.routeComments)
     });
 
   }
   newComment(){
     // var newComment: Comment = new Comment()
-    console.log(this.todisplay);
   }
 }
-// ngOnInit() {
-//   this.route.params.forEach((urlParameters) => {
-//     this.routeId = urlParameters['id'];
-//   });
-//   this.todisplay = this.commentsService.getComments().subscribe(data=>{this.todisplay = data; console.log(this.todisplay);
-//
-//   for(var i = 0; i<this.todisplay.length; i++){
-//     console.log(this.todisplay[i].hikeId);
-//     console.log(this.routeId);
-//     if(this.todisplay[i].hikeId == this.routeId){
-//       this.routeComments.push(this.todisplay[i]);
-//       console.log("push");
-//     }
-//     console.log(this.routeComments)
-//   }});
-//
-// }

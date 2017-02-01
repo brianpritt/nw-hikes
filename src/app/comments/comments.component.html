@@ -1,11 +1,14 @@
-<hr>
+
 <h3>Comments</h3>
-<h4>This is an H4</h4>
+<hr>
 <div *ngFor="let display of todisplay | comment:routeId">
-    <h3>{{display.body}} !!</h3>
+
+    <h3>{{display.title}}</h3>
+    <p>{{display.body}}</p>
+    <!-- <h6>{{display.user}}</h6> -->
+    <hr>
 </div>
 <hr>
 <input #title placeholder="Title">
 <input #comment placeholder="Add Comment">
 <button (click)='newComment(comment.value)'>Submit</button>
-<button (click)="newComment()">log</button>
