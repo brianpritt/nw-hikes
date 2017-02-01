@@ -15,7 +15,7 @@ export class MapDisplayComponent implements OnInit {
   constructor(private mapService: MapServiceService) { }
 
   ngOnInit() {
-    this.mapService.initializeMap();
+    this.mapService.initializeMap(-13548593.9237,5677830.15763, 8);
   }
 
 
