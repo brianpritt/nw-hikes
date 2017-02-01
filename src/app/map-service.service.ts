@@ -19,31 +19,26 @@ export class MapServiceService {
     });
     var pinLayer = new ol.layer.Vector({
       source: pinSource,
-      maxResolution: 500
+      maxResolution: 500,
+      style: this.setStyle()
     });
     return pinLayer
   }
 
   setStyle(){
     var  style = new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#f4bf42',
-        width: 0.7
+      image: new ol.style.Circle({
+        radius: 8,
+        fill: new ol.style.Fill({
+          color: 'rgba(255, 153, 0, 0.8)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: 'black',
+          width: 1
+        })
       })
     })
     return style
-  }
-
-
-  createData(){
-    var vector = new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url: '../trail.json',
-        format: new ol.format.GeoJSON()
-      }),
-      style: this.setStyle()
-    });
-    return vector;
   }
 
   initializeMap(x,y,z){
@@ -54,7 +49,6 @@ export class MapServiceService {
             layer: 'terrain'
           })
         }),
-        this.createData(),
         this.createPin(x,y)
       ],
       target: 'map',
