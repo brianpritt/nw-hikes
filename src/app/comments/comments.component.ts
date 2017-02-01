@@ -3,7 +3,7 @@ import { MemberService } from '../member.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CommentsService } from '../comments.service';
-
+import { Comments } from '../comments.model';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
@@ -17,12 +17,14 @@ export class CommentsComponent implements OnInit {
   todisplay;
   allComments;
   routeComments = [];
+  isLoggedIn;
 
   constructor(private memberService: MemberService,private route: ActivatedRoute,
   private location: Location, private commentsService: CommentsService) { }
 
 
   ngOnInit() {
+    this.isLoggedIn = this.memberService.getCurrentUser();
     this.route.params.forEach((urlParameters) => {
       this.routeId = urlParameters['id'];
     });
@@ -31,7 +33,8 @@ export class CommentsComponent implements OnInit {
     });
 
   }
-  newComment(){
-    // var newComment: Comment = new Comment()
+  newComment(title: string, body: string){
+    var newComment: Comments = new Comments(title, body, this.routeId, this.memberService.getCurrentUser(), "12/26/2011");
+    this.commentsService.addComment(newComment);
   }
 }

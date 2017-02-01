@@ -10,8 +10,9 @@ export class CommentsService {
     this.comments = angularFire.database.list('comments');
   }
   getComments(){
-    console.log(this.comments);
     return this.comments;
   }
-
+  addComment(comment){
+    this.comments.push(comment);
+  }
 }

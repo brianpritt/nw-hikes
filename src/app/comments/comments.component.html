@@ -5,10 +5,11 @@
 
     <h3>{{display.title}}</h3>
     <p>{{display.body}}</p>
-    <!-- <h6>{{display.user}}</h6> -->
     <hr>
 </div>
 <hr>
-<input #title placeholder="Title">
-<input #comment placeholder="Add Comment">
-<button (click)='newComment(comment.value)'>Submit</button>
+<div *ngIf=(isLoggedIn)>
+  <input #title placeholder="Title">
+  <input #comment placeholder="Add Comment">
+  <button (click)='newComment(title.value, comment.value);title.value=""; comment.value=""'>Submit</button>
+</div>
