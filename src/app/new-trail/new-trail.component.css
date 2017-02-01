@@ -1,0 +1,11 @@
+div.row input {
+  margin-top: 10px;
+}
+
+div.row textarea {
+  margin-top: 10px;
+}
+
+div.row label {
+  font-size: .8em;
+}

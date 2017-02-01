@@ -19,9 +19,21 @@ export class NewTrailComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, intro: string, description: string, region: string,  difficulty: string, length: string, trailhead_location: string, picture: string) {
+  submitForm(name: string, elevation: string, region: string, lat, long, intro: string, description: string, length: string, difficulty: string, picture: string) {
     if(name === "") {
       return alert("Please enter a name for the trail.");
+    }
+    if(elevation === "") {
+      return alert("Please enter an elevation gain for the trail.");
+    }
+    if(region === "") {
+      return alert("Please enter a region.");
+    }
+    if(lat === NaN || lat === "") {
+      return alert("Please enter a latitude for the trailhead.");
+    }
+    if(long === NaN || long === "") {
+      return alert("Please enter a longitude for the trailhead.");
     }
     if(intro === "") {
       return alert("Please enter a description teaser.");
@@ -29,20 +41,13 @@ export class NewTrailComponent implements OnInit {
     if(description === "") {
       return alert("Please enter a description for the trail.");
     }
-    if(region === "") {
-      return alert("Please enter a region.");
+    if(length === "") {
+      return alert("Please enter a length for the trail.");
     }
     if(difficulty === "") {
       return alert("Please enter a difficulty.");
     }
-    if(length === "") {
-      return alert("Please enter a length for the trail.");
-    }
-    if(trailhead_location === "") {
-      return alert("Please enter a location for the trailhead.");
-    }
-    var newTrail: Trail = new Trail(name, intro, description, region,  difficulty, length, trailhead_location, picture);
+    var newTrail: Trail = new Trail(name, elevation, region, parseInt(lat), parseInt(long), intro, description, length, difficulty, picture);
     this.trailService.addTrail(newTrail);
   }
-
 }
