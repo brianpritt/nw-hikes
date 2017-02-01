@@ -22,6 +22,7 @@ import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 import { OtherComponent } from './members/members.component';
 import { HikesListComponent } from './hikes-list/hikes-list.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 export const firebaseConfig = {
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     SignupComponent,
     EmailComponent,
     OtherComponent,
-    HikesListComponent
+    HikesListComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

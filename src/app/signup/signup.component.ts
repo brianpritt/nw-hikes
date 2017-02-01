@@ -10,8 +10,7 @@ import { moveIn, fallIn } from '../router.animations';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
   animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''},
-  providers: [MemberService]
+  host: {'[@moveIn]': ''}
 })//following code follows https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebase
 export class SignupComponent implements OnInit {
   state: string = '';

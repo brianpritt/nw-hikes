@@ -19,6 +19,9 @@ export class MemberService {
   setUser(newUser){
     this.currentUser = newUser;
   }
+  setLoginUser(user){
+    this.currentUser = user;
+  }
   getCurrentUser(){
 
     return this.currentUser;

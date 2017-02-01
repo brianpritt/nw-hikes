@@ -38,7 +38,7 @@ export class EmailComponent implements OnInit {
         }).then(
           (success) => {
           console.log(success);
-          this.memberService.setUser(formData.value.email)
+          this.memberService.setLoginUser(formData.value.email)
           this.router.navigate(['/members']);
         }).catch(
           (err) => {
