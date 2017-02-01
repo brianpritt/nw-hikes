@@ -9,8 +9,7 @@ import { moveIn, fallIn } from '../router.animations';
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
   animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''},
-  providers: [MemberService]
+  host: {'[@moveIn]': ''}
 })
 
 

@@ -4,7 +4,7 @@ import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable } from 
 @Injectable()
 export class MemberService {
   members: FirebaseListObservable<any[]>;
-  private currentUser;
+  private currentUser = null;
 
   constructor(private angularFire: AngularFire){
     this.members = angularFire.database.list('members');
@@ -18,9 +18,12 @@ export class MemberService {
   }
   setUser(newUser){
     this.currentUser = newUser;
-    console.log(this.currentUser)
   }
   getCurrentUser(){
+
     return this.currentUser;
+  }
+  logOutUser(){
+    this.currentUser = null;
   }
 }

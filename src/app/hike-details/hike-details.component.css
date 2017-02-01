@@ -11,3 +11,11 @@ div.hike-details img {
 div.hike-details span.heavy {
   font-weight: 600;
 }
+
+#map{
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}

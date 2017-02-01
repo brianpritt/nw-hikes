@@ -8,8 +8,21 @@ export class MapServiceService {
 
   constructor(private http: Http) { }
 
-  createFirebase(){
-    var firebaseRef = firebase.database().ref('trails').push();
+  createPin(){
+    var iconFeature = new ol.Feature({
+      geometry: new ol.geom.Point([-13548593.9237,5677830.15763]),
+      name: 'Null Island',
+      population: 4000,
+      rainfall: 500
+    });
+
+    var pinSource = new ol.source.Vector({
+      features: [iconFeature]
+    });
+    var pinLayer = new ol.layer.Vector({
+      source: pinSource
+    });
+    return pinLayer
   }
 
   setStyle(){
@@ -42,7 +55,8 @@ export class MapServiceService {
             layer: 'terrain'
           })
         }),
-        this.createData()
+        this.createData(),
+        this.createPin()
       ],
       target: 'map',
       controls: ol.control.defaults({

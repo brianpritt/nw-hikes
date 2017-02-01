@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
         var newUser: User = new User(formData.value.username, formData.value.email);
         console.log(newUser);
         this.memberService.addNewUser(newUser);
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login-email'])
       }).catch(
         (err) => {
         console.log(err);
