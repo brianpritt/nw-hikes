@@ -2,6 +2,13 @@ main {
   /*flex: 1 0 auto;*/
 }
 
+button.btn {
+  background-color: #558b2f;
+}
+button.btn:hover {
+  background-color: #8bc34a;
+}
+
 body {
   background-image: url("./assets/images/newberry-crater.jpg");
   background-repeat: no-repeat;

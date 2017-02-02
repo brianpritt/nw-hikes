@@ -21,3 +21,9 @@ div.home-page {
   padding: 3%;
   min-height: 2000px;
 }
+
+div.home-page span {
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
