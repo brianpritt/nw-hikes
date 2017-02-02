@@ -1,31 +1,47 @@
-# NwHikes
+# Hike the Northwest
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+#### February 2, 2017
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### By **Brian Pritt, Ryan Peterson and Steve Burton**
 
-## Code scaffolding
+### Specifications
+This is a project to create a better hiking application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
+## Setup/Installation Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+To run the application:
+* Clone this repository to your computer.
+* Navigate to the project directory in the terminal.
+* Use the commands $ npm install and $ bower init to download the packages necessary to run the application.
+* Create a file to store an API key:
 
-## Running unit tests
+src/app/api-keys.ts <br>
+The file should look like this, with your own Firebase credentials:  <br>
+export var masterFirebaseConfig = { <br>
+apiKey: "xxxx", <br>
+authDomain: "xxxx.firebaseapp.com", <br>
+databaseURL: "https://xxxx.firebaseio.com", <br>
+storageBucket: "xxxx.appspot.com", <br>
+messagingSenderId: "xxxx" <br>
+};
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Now run the commands $ ng build then $ ng serve and navigate to http://localhost:4200 in your web browser to run the project on the local server.
 
-## Running end-to-end tests
+## Known Bugs
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+None.
 
-## Deploying to GitHub Pages
+## Support and contact details
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+You can contact me on Github at brianpritt, ryanpeterson08, steve-burton.
 
-## Further help
+## Technologies Used
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+JavaScript, Angular 2, OpenStreetMap OpenLayers, Firebase, Node, Bower HTML, CSS, Materialize
+
+### License
+
+GPL v3
+
+Copyright (c) 2017 **_Brian Pritt, Ryan Peterson and Steve Burton_**
