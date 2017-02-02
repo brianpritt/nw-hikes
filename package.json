@@ -48,5 +48,16 @@
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
     "typescript": "~2.0.3"
-  }
+  },
+  "description": "#### February 2, 2017",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianpritt/nw-hikes.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/brianpritt/nw-hikes/issues"
+  },
+  "homepage": "https://github.com/brianpritt/nw-hikes#readme"
 }
