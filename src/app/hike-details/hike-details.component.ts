@@ -13,7 +13,7 @@ import { Trail } from '../trail.model';
   selector: 'app-hike-details',
   templateUrl: './hike-details.component.html',
   styleUrls: ['./hike-details.component.css'],
-  providers: [TrailService, MapServiceService]
+  providers: [ MapServiceService]
 })
 export class HikeDetailsComponent implements OnInit {
   trailId: string;
@@ -38,6 +38,7 @@ export class HikeDetailsComponent implements OnInit {
       this.x = this.trailToDisplay.long;
       this.y = this.trailToDisplay.lat;
       this.mapService.initializeMap(this.x,this.y,13);
+      this.trailService.sendATrailObject(data);
     });
 
   }

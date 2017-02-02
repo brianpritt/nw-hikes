@@ -1,55 +1,55 @@
 <h2>Edit trail</h2>
-<div class="row">
+<div class="row" *ngIf=(trailService.trailToSend)>
   <div class="input-field col s12">
     <label>Edit trail name</label><br>
-    <input (selectedTrail)="selectedTrail.name">
+    <input [(ngModel)]="serviceTrail.name">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail elevation gain</label><br>
-    <input (selectedTrail)="selectedTrail.elevation_gain">
+    <input [(ngModel)]="serviceTrail.elevation_gain">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail region</label><br>
-    <input (selectedTrail)="selectedTrail.region">
+    <input [(ngModel)]="serviceTrail.region">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail latitude</label><br>
-    <input (selectedTrail)="selectedTrail.lat">
+    <input [(ngModel)]="serviceTrail.lat">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail longitude</label><br>
-    <input (selectedTrail)="selectedTrail.long">
+    <input [(ngModel)]="serviceTrail.long">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail intro teaser</label><br>
-    <input (selectedTrail)="selectedTrail.intro">
+    <input [(ngModel)]="serviceTrail.intro">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail description</label><br>
-    <input (selectedTrail)="selectedTrail.description">
+    <input [(ngModel)]="serviceTrail.description">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail length</label><br>
-    <input (selectedTrail)="selectedTrail.length">
+    <input [(ngModel)]="serviceTrail.length">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail difficulty</label><br>
-    <input (selectedTrail)="selectedTrail.difficulty">
+    <input [(ngModel)]="serviceTrail.difficulty">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail picture URL</label><br>
-    <input (selectedTrail)="selectedTrail.picture">
+    <input [(ngModel)]="serviceTrail.picture">
   </div>
 
-  <button class="btn" (click)="beginUpdateTrail(selectedTrail)">Update</button>
-  <button class="btn" (click)="deleteTrail(selectedTrail)">Delete</button>
+  <button class="btn" (click)="beginUpdateTrail(serviceTrail)">Update</button>
+  <button class="btn" (click)="deleteTrail(serviceTrail)">Delete</button>
 </div>

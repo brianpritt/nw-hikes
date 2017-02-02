@@ -9,22 +9,28 @@ import { Trail } from '../trail.model';
   selector: 'app-edit-trail',
   templateUrl: './edit-trail.component.html',
   styleUrls: ['./edit-trail.component.css'],
-  providers: [TrailService]
+  providers: []
 })
 export class EditTrailComponent implements OnInit {
-  @Input() selectedTrail: Trail;
-
+  // @Input() selectedTrail: Trail;
+  selectedTrail;
+  childSelectedTrail;
+  serviceTrail;
   constructor(private trailService: TrailService,
               private memberService: MemberService) { }
 
   ngOnInit() {
+    this.childSelectedTrail = this.selectedTrail;
+    console.log(this.childSelectedTrail);
+    console.log(this.selectedTrail);
+    this.trailService.trailToSend;
   }
+
 
   beginUpdateTrail(trailToUpdate) {
-    console.log(trailToUpdate.name)
+    console.log(trailToUpdate)
     this.trailService.updateTrail(trailToUpdate);
   }
-
   deleteTrail(trailToDelete) {
     if(confirm("Are you sure you want to delete this trail?")) {
       this.trailService.deleteTrail(trailToDelete);

@@ -17,7 +17,10 @@ export class OtherComponent implements OnInit {
   state: string = '';
   member;
 
-  constructor(public af: AngularFire,private router: Router, private memberService: MemberService) {
+  constructor(
+    public af: AngularFire,
+    private router: Router,
+    private memberService: MemberService) {
 
     this.af.auth.subscribe(auth => {
       if(auth) {
@@ -34,8 +37,10 @@ export class OtherComponent implements OnInit {
 
 
   ngOnInit() {
-    this.member = this.memberService.getCurrentUser()
-    console.log(this.member);
+    // this.memberService.currentUser[0].subscribe(data=> {
+    //   this.member = data;
+    //   console.log(this.member);
+    // })
   }
 
 }

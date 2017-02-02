@@ -24,8 +24,9 @@ import { OtherComponent } from './members/members.component';
 import { HikesListComponent } from './hikes-list/hikes-list.component';
 import { CommentsComponent } from './comments/comments.component';
 import { NewTrailComponent } from './new-trail/new-trail.component';
-import {CommentPipe} from './comment.pipe';
+import { CommentPipe } from './comment.pipe';
 import { EditTrailComponent } from './edit-trail/edit-trail.component';
+import { TrailService } from './trail.service';
 
 
 
@@ -63,7 +64,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
 
   ],
-  providers: [AuthGuard, MemberService],
+  providers: [AuthGuard, MemberService, TrailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
