@@ -28,8 +28,7 @@ const appRoutes = [
   { path: 'members', component: OtherComponent, canActivate: [AuthGuard] },
   { path: 'hikes-list', component: HikesListComponent },
   { path: 'trails/:id', component: HikeDetailsComponent },
-  { path: 'new-trail', component: NewTrailComponent },
-  { path: 'edit-trail', component: EditTrailComponent }
+  { path: 'new-trail', component: NewTrailComponent }
 
  ];
 

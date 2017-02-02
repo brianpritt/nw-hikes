@@ -16,7 +16,7 @@ import { Trail } from '../trail.model';
 export class EditTrailComponent implements OnInit {
   @Input() selectedTrail;
 
-  constructor(private trailService: TrailService, 
+  constructor(private trailService: TrailService,
               private memberService: MemberService) { }
 
   ngOnInit() {
@@ -30,6 +30,10 @@ export class EditTrailComponent implements OnInit {
     if(confirm("Are you sure you want to delete this trail?")) {
       this.trailService.deleteTrail(trailToDelete);
     }
+  }
+
+  logTrail(){
+    console.log(this.selectedTrail.name);
   }
 
 }

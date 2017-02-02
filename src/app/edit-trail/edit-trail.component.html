@@ -1,8 +1,10 @@
+
+
 <h2>Edit trail</h2>
 <div class="row">
   <div class="input-field col s12">
     <label>Edit trail name</label><br>
-    <input [(ngModel)]="selectedTrail.name">
+    <input #selectedTrail.name>
   </div>
 
   <div class="input-field col s12">
@@ -50,6 +52,8 @@
     <input [(ngModel)]="selectedTrail.picture">
   </div>
 
-  <button class="btn" (click)="updateTrail(selectedTrail)">Update</button> 
+  <button class="btn" (click)="updateTrail(selectedTrail)">Update</button>
   <button class="btn" (click)="deleteTrail(selectedTrail)">Delete</button>
 </div>
+
+<button (click)="logTrail()">log trail button</button>
