@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-
+import { MapServiceService } from '../map-service.service';
 import { TrailService } from '../trail.service';
 import { Trail } from '../trail.model';
 
@@ -10,11 +10,11 @@ import { Trail } from '../trail.model';
   selector: 'app-new-trail',
   templateUrl: './new-trail.component.html',
   styleUrls: ['./new-trail.component.css'],
-  providers: [TrailService]
+  providers: [TrailService, MapServiceService]
 })
 export class NewTrailComponent implements OnInit {
 
-  constructor(private trailService: TrailService) { }
+  constructor(private trailService: TrailService, private mapService: MapServiceService) { }
 
   ngOnInit() {
   }

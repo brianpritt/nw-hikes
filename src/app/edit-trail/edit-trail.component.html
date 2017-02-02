@@ -2,54 +2,54 @@
 <div class="row">
   <div class="input-field col s12">
     <label>Edit trail name</label><br>
-    <input [(ngModel)]="selectedTrail.name">
+    <input (selectedTrail)="selectedTrail.name">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail elevation gain</label><br>
-    <input [(ngModel)]="selectedTrail.elevation">
+    <input (selectedTrail)="selectedTrail.elevation_gain">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail region</label><br>
-    <input [(ngModel)]="selectedTrail.region">
+    <input (selectedTrail)="selectedTrail.region">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail latitude</label><br>
-    <input [(ngModel)]="selectedTrail.lat">
+    <input (selectedTrail)="selectedTrail.lat">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail longitude</label><br>
-    <input [(ngModel)]="selectedTrail.long">
+    <input (selectedTrail)="selectedTrail.long">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail intro teaser</label><br>
-    <input [(ngModel)]="selectedTrail.intro">
+    <input (selectedTrail)="selectedTrail.intro">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail description</label><br>
-    <input [(ngModel)]="selectedTrail.description">
+    <input (selectedTrail)="selectedTrail.description">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail length</label><br>
-    <input [(ngModel)]="selectedTrail.length">
+    <input (selectedTrail)="selectedTrail.length">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail difficulty</label><br>
-    <input [(ngModel)]="selectedTrail.difficulty">
+    <input (selectedTrail)="selectedTrail.difficulty">
   </div>
 
   <div class="input-field col s12">
     <label>Edit trail picture URL</label><br>
-    <input [(ngModel)]="selectedTrail.picture">
+    <input (selectedTrail)="selectedTrail.picture">
   </div>
 
-  <button class="btn" (click)="updateTrail(selectedTrail)">Update</button> 
+  <button class="btn" (click)="beginUpdateTrail(selectedTrail)">Update</button>
   <button class="btn" (click)="deleteTrail(selectedTrail)">Delete</button>
 </div>

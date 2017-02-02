@@ -17,7 +17,7 @@ import { Trail } from '../trail.model';
 })
 export class HikeDetailsComponent implements OnInit {
   trailId: string;
-  trailToDisplay;
+  trailToDisplay: Trail;
   x: number;
   y: number;
 
