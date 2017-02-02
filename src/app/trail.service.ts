@@ -44,8 +44,8 @@ export class TrailService {
     var trailInFirebase = this.getTrailById(trailToDelete.$key);
     trailInFirebase.remove();
   }
-  sendATrailObject(trail){
+  sendTrailObject(trail){
     this.trailToSend = trail;
-    console.log(this.trailToSend)
+    return trail;
   }
 }

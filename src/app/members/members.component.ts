@@ -16,6 +16,7 @@ export class OtherComponent implements OnInit {
   name: any;
   state: string = '';
   member;
+  thisUser:any;
 
   constructor(
     public af: AngularFire,
@@ -37,7 +38,8 @@ export class OtherComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.memberService.currentUser[0].subscribe(data=> {
+    // this.thisUser = this.memberService.currentUser[0];
+    // this.thisUser.subscribe(data => {
     //   this.member = data;
     //   console.log(this.member);
     // })

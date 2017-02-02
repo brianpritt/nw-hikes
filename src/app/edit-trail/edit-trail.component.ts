@@ -12,18 +12,16 @@ import { Trail } from '../trail.model';
   providers: []
 })
 export class EditTrailComponent implements OnInit {
-  // @Input() selectedTrail: Trail;
-  selectedTrail;
-  childSelectedTrail;
-  serviceTrail;
+  @Input() selectedTrail: Trail;
+  // selectedTrail;
+  // serviceTrail;
   constructor(private trailService: TrailService,
               private memberService: MemberService) { }
 
   ngOnInit() {
-    this.childSelectedTrail = this.selectedTrail;
-    console.log(this.childSelectedTrail);
-    console.log(this.selectedTrail);
-    this.trailService.trailToSend;
+    // console.log(this.childSelectedTrail);
+    // console.log(this.selectedTrail);
+    //this.trailService.sendTrailObject(this.selectedTrail)
   }
 
 
