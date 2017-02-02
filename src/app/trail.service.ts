@@ -22,18 +22,20 @@ export class TrailService {
     this.trails.push(newTrail);
   }
 
-  updateTrail(updatedTrail) {
-    var trailInFirebase = this.getTrailById(updatedTrail.$key);
-    trailInFirebase.update({name: updatedTrail.name,
-                            elevation: updatedTrail.elevation,
-                            region: updatedTrail.region,
-                            lat: updatedTrail.lat,
-                            long: updatedTrail.long,
-                            intro: updatedTrail.intro,
-                            description: updatedTrail.description,
-                            length: updatedTrail.length,
-                            difficulty: updatedTrail.difficulty,
-                            picture: updatedTrail.picture});
+  updateTrail(localUpdatedTrail) {
+    console.log(localUpdatedTrail.$key)
+    var trailInFirebase = this.getTrailById(localUpdatedTrail.$key);
+    console.log(trailInFirebase);
+    trailInFirebase.update({name: localUpdatedTrail.name,
+                            elevation_gain: localUpdatedTrail.elevation_gain,
+                            region: localUpdatedTrail.region,
+                            lat: localUpdatedTrail.lat,
+                            long: localUpdatedTrail.long,
+                            intro: localUpdatedTrail.intro,
+                            description: localUpdatedTrail.description,
+                            length: localUpdatedTrail.length,
+                            difficulty: localUpdatedTrail.difficulty,
+                            picture: localUpdatedTrail.picture});
   }
 
   deleteTrail(trailToDelete) {

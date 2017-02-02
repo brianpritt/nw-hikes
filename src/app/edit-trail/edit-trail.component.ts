@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
-
 import { TrailService } from '../trail.service';
 import { MemberService } from '../member.service';
 import { Trail } from '../trail.model';
@@ -14,15 +12,16 @@ import { Trail } from '../trail.model';
   providers: [TrailService]
 })
 export class EditTrailComponent implements OnInit {
-  @Input() selectedTrail;
+  @Input() selectedTrail: Trail;
 
-  constructor(private trailService: TrailService, 
+  constructor(private trailService: TrailService,
               private memberService: MemberService) { }
 
   ngOnInit() {
   }
 
-  updateTrail(trailToUpdate) {
+  beginUpdateTrail(trailToUpdate) {
+    console.log(trailToUpdate.name)
     this.trailService.updateTrail(trailToUpdate);
   }
 

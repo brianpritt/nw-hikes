@@ -9,3 +9,11 @@ div.row textarea {
 div.row label {
   font-size: .8em;
 }
+
+#map{
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
