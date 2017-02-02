@@ -2,6 +2,7 @@ main {
   /*flex: 1 0 auto;*/
 }
 
+<<<<<<< HEAD
   /*.form-container {
       background:white;
       padding:3.5em;
@@ -10,6 +11,30 @@ main {
       left:50%;
       margin-left:-250px;
   }*/
+=======
+button.btn {
+  background-color: #558b2f;
+}
+button.btn:hover {
+  background-color: #8bc34a;
+}
+
+body {
+  background-image: url("./assets/images/newberry-crater.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-container {
+    background:white;
+    padding:3.5em;
+    width:500px;
+    position:fixed;
+    left:50%;
+    margin-left:-250px;
+}
+>>>>>>> d7b6aa0c6144a51848aeb3873f1f64128c997bbe
 
 /*button {
     padding:1.2em;
