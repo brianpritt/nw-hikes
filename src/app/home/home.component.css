@@ -27,3 +27,7 @@ div.home-page span {
   font-style: italic;
   margin-bottom: 10px;
 }
+
+div.carousel img {
+  height: 400px;
+}

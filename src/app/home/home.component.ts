@@ -12,5 +12,8 @@ export class HomeComponent implements OnInit {
 constructor(private memberService: MemberService) {}
 
   ngOnInit() {
- }
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  }
 }
