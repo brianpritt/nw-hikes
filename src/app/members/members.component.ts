@@ -15,6 +15,7 @@ import { MemberService } from '../member.service';
 export class OtherComponent implements OnInit {
   name: any;
   state: string = '';
+  member;
 
   constructor(public af: AngularFire,private router: Router, private memberService: MemberService) {
 
@@ -33,6 +34,8 @@ export class OtherComponent implements OnInit {
 
 
   ngOnInit() {
+    this.member = this.memberService.getCurrentUser()
+    console.log(this.member);
   }
 
 }

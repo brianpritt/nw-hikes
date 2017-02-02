@@ -20,6 +20,7 @@ export class MemberService {
     this.currentUser = newUser;
   }
   setLoginUser(user){
+    user = this.getMemberByEmail(user);
     this.currentUser = user;
   }
   getCurrentUser(){
@@ -28,5 +29,9 @@ export class MemberService {
   }
   logOutUser(){
     this.currentUser = null;
+  }
+  getMemberByEmail(user){
+    console.log(user)
+    console.log(this.angularFire.database.object('users/' + user));
   }
 }
