@@ -1,8 +1,10 @@
 {
   "trails": [{
     "name":"McNeil Point",
+    "elevation_gain":"2200",
     "region":"Mt. Hood",
-    "trailhead_location":"45.4074, -121.7856",
+    "lat":5685887.93159,
+    "long":-13557110.978,
     "intro": "This hike will challenge even the sturdiest hiker, but its beauty makes the struggle worth it.",
     "description": "The Timberline Trail was originally planned to climb high above the Muddy Fork, and over the rocky alpine buttress of McNeil Point. But after construction had begun, trail builders realized that the route would not be possible to build, due to the terrain and persistent snowfields. Yet, a stone shelter had already been built at McNeil Point, and has been a favorite destination of hikers ever since.",
     "length": "10.4 miles",
@@ -11,8 +13,10 @@
   },
   {
     "name":"Coyote Wall",
+    "elevation_gain":"1895",
     "region":"Columbia River Gorge",
-    "trailhead_location":"45.7005, -121.4024",
+    "lat":635626.275661,
+    "long":-13514453.3491,
     "intro": "The wildflower show can make this a crowded hike in the springtime - a great reason to skip work for a weekday hike",
     "description": "The great quintet of hikes on the Washington side of the Gorge includes Hamilton Mountain, Table Mountain, Dog Mountain, Catherine Creek and Coyote Wall. The latter is the most recent addition to the popularity index although Coyote Wall has been a mecca for mountain bikers going back over three decades now. Hikers discovered it in the 1990s and began to arrive in droves on the unofficial trails around and on the massive syncline of columnar basalt. They came for the expansive views, the grassy slopes and oak woodlands, and to enjoy, in season, the dazzling display of wildflowers - as well as endure the odd tick and rattlesnake. For better or worse, the trailhead on Courtney Road filled up by 10:00 a.m. on a balmy spring weekend morning. Mountain bikers zipped in and out and were given much freedom by private landowners; hikers and their dogs passed through more slowly and sometimes noisily, strayed from the trails and onto private property, often deposited litter and other things (think human waste) and the whole escalation in use and misuse led to the current Forest Service plan to regulate the area. Thus, although a brand new trailhead has been constructed above Locke Lake, access to the Coyote Canyon area and its trails has been closed and official trail construction has been going on between Burdoin Mountain and Catherine Creek. The loop described here takes you up along the western edge of the Labyrinth, over to the magnificent syncline wall, and then up along it into oak/Douglas-fir woods to do a short loop back and drop down the rim once more. Coming down Coyote Wall, taking in expansive vistas every step of the way, is the just reward for slogging all the way up. An extra perk is that dog owners can leave their pets off leash in the Coyote Wall area all year.",
     "length": "7.8 miles",
@@ -21,8 +25,10 @@
   },
   {
     "name":"Elowah Falls",
+    "elevation_gain":"280",
     "region":"Columbia River Gorge",
-    "trailhead_location":"45.6124, -121.00428",
+    "lat":5718452.12749,
+    "long":-13470134.8334,
     "intro": "Elowah Falls is surely one of the must-do Gorge hikes.",
     "description": "At Elowah Falls, McCord Creek crashes into a huge amphitheater made up of several distinct lava flows. This is a fairly easy hike, appropriate for most beginners. There is a small amount of climbing with a summit in the middle. Consider combining this hike with the Upper McCord Creek Falls Hike.",
     "length": "1.4 miles",
@@ -31,8 +37,10 @@
   },
   {
     "name":"Neahkahnie Mountain",
+    "elevation_gain": "1631",
     "region":"Coast",
-    "trailhead_location":"45.6124, -121.00428",
+    "lat":5741908.28875,
+    "long":-13799063.8912,
     "intro": "Follow in Lewis & Clark's footsteps to a sublime viewpoint.",
     "description": "The Oregon Coast Trail crosses Neahkahnie Mountain from Short Sand Beach and descends to Manzanita. This hike, mostly within the boundaries of Oswald West State Park, takes you from the majestic old growth around Necarney Creek to the clifftop views of the Devils Cauldron; then you cross meadows frequented by elk to hike up Neahkahnie Mountain to a spectacular viewpoint. You'll descend to the South Neahkahnie Mountain Trailhead. From there, there's a mile and a half of road walking, including a mile and a quarter along the shoulder of busy Highway 101 (There is a path for pedestrians), but the scenic views make the loop worthwhile. A shorter version of this loop, which knocks 2.6 miles off the total, begins at the North Neahkahnie Mountain Trailhead.",
     "length": "8 miles",
@@ -41,8 +49,10 @@
   },
   {
     "name":"Threes Sisters Loop",
+    "elevation_gain": "5800",
     "region":"Central",
-    "trailhead_location":"44.2593, -121.7871",
+    "lat":5741908.28875,
+    "long":-13799063.8912,
     "intro": "This multi-day trips is on many an Oregon backpacker's bucket list.",
     "description": "You get great views of the Three Sisters, other peaks, and surrounding areas. There are some amazing lava fields. There are alpine meadows and streams. There are places that are fairly crowded and other places that are pretty remote. The trail around Mount Hood is officially impassable at Eliot Creek, so the Three Sisters hike is a good alternative. Compared to the trail around Mount Hood, the Three Sisters is longer but less elevation gain. There are fewer difficult hikes down into steep canyons and across difficult streams. On Mount Hood there is more fine ash eroded by water with streams flowing on top. On the Three Sisters there is more pumice like material with the water perculating into it rather than forming streams. There is less human impact like Timberline Lodge and Mount Hood Meadows ski area. It's a little more difficult to find drinking water on the Three Sisters, especially on the West side, because the soil is more porous so the water flows underneath. There is an option for a 35 mile loop by hiking up between the South Sister and the Middle/North Sisters. This trail is un-developed at places. The elevation gain for this loop is about 3900 feet.",
     "length": "48.1 miles",
@@ -50,10 +60,34 @@
     "picture": "https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5114581.jpg"
   }
   ],
-  "members":[{
+  "members":[
+    {
     "bio":"",
     "userEmail": "bradpitt@gmail.com",
     "userName": "bradpitt"
     }
+  ],
+  "comments":[
+    {
+    "title": "McNeil point for the win",
+    "body": "I hiked this last March and there was still a little snow left.  It made for some unsure footing, but We made it to the shelter.  For those who are wondering, yes you can go up just a little bit higher and get between the glaciers, but it will add a few hours to the hike",
+    "hikeId": 0,
+    "user" : 0,
+    "date" :"12/26/2016"
+  },
+  {
+    "title": "McNeil point sucks",
+    "body": "Don't waste your time, its too crowded!",
+    "hikeId": 0,
+    "user" : "KbqtlcxblmywRlVPNdX",
+    "date" :"12/26/2016"
+  },
+  {
+    "title": "Coyote Wall is too windy",
+    "body": "Make sure you bring a jacket, it is a very exposed vista.  Also, there are mountain bikes riding around, so be mindful",
+    "hikeId": 1,
+    "user" : "KbqtlcxblmywRlVPNdX",
+    "date" :"12/26/2016"
+  }
   ]
 }

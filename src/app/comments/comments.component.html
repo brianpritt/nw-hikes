@@ -1,5 +1,15 @@
-<hr>
+
 <h3>Comments</h3>
 <hr>
-<input #comment placeholder="Add Comment">
-<button (click)='newComment()'>Submit</button>
+<div *ngFor="let display of todisplay | comment:routeId">
+
+    <h3>{{display.title}}</h3>
+    <p>{{display.body}}</p>
+    <hr>
+</div>
+<hr>
+<div *ngIf=(isLoggedIn)>
+  <input #title placeholder="Title">
+  <input #comment placeholder="Add Comment">
+  <button (click)='newComment(title.value, comment.value);title.value=""; comment.value=""'>Submit</button>
+</div>
