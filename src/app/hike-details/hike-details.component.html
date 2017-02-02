@@ -1,21 +1,21 @@
 <div class="hike-details">
 
   <div id="map"></div>
-  <img src="{{trailToDisplay?.picture}}" alt="Photo of trail">
-  <h3>{{trailToDisplay?.name}}</h3>
-  <!-- <h5>{{(trailToDisplay | async)?.intro}}</h5> -->
-  <p>
-    Region: <span class="heavy">{{trailToDisplay?.region}}</span><br>
-    Difficulty: <span class="heavy">{{trailToDisplay?.difficulty}}</span><br>
-    Elevation gain: {{trailToDisplay?.elevation}}<br>
-    Distance: <span class="heavy">{{trailToDisplay?.length}}</span><br>
-  </p>
-  <span class="heavy">Details</span> <br>
-  <p>{{trailToDisplay?.description}}</p><br>
-  <p>Latitude: {{trailToDisplay?.lat}}, Longitude: {{trailToDisplay?.long}}</p>
+  <div class="hike-component">
+    <img src="{{trailToDisplay?.picture}}" alt="Photo of trail">
+    <h2>{{trailToDisplay?.name}}</h2>
+    <p>
+      Region: <span class="heavy">{{trailToDisplay?.region}}</span><br>
+      Difficulty: <span class="heavy">{{trailToDisplay?.difficulty}}</span><br>
+      Elevation gain: {{trailToDisplay?.elevation}}<br>
+      Distance: <span class="heavy">{{trailToDisplay?.length}}</span><br>
+    </p>
+    <span class="heavy">Details</span> <br>
+    <p>{{trailToDisplay?.description}}</p><br>
+    <p>Latitude: {{trailToDisplay?.lat}}, Longitude: {{trailToDisplay?.long}}</p>
+  </div>
   <app-comments></app-comments>
 
-  <hr>
   <!-- <div *ngIf="(memberService.getCurrentUser())"> -->
     <app-edit-trail [selectedTrail]="trailToDisplay"></app-edit-trail>
   <!-- </div> -->

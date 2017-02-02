@@ -1,0 +1,37 @@
+div.comment-form {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 3%;
+  border-radius: 20px;
+}
+
+input::-webkit-input-placeholder {
+color: #4f4f4f !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: #4f4f4f !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #4f4f4f !important;
+}
+
+input:-ms-input-placeholder {
+color: #4f4f4f !important;
+}
+
+textarea::-webkit-input-placeholder {
+color: #4f4f4f !important;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+color: #4f4f4f !important;
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: #4f4f4f !important;
+}
+
+textarea:-ms-input-placeholder {
+color: #4f4f4f !important;
+}

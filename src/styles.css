@@ -2,6 +2,13 @@ main {
   /*flex: 1 0 auto;*/
 }
 
+body {
+  background-image: url("./assets/images/newberry-crater.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .form-container {
     background:white;
     padding:3.5em;

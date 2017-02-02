@@ -1,0 +1,9 @@
+div.edit-form {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 3%;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+div.edit-form label {
+  color: black;
+}

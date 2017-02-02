@@ -1,0 +1,12 @@
+a.brand-logo {
+  float: right;
+  padding-left: 15px;
+}
+
+ul.right {
+  padding: 20px 0 0 0;
+}
+
+div.nav-wrapper a:hover {
+  color: #a5d6a7;
+}
