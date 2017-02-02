@@ -1,8 +1,8 @@
 <div class="form-container" id="toolbar">
     <header [@fallIn]="state">
-      <button (click)="logout()" class="basic-btn">Logout</button>
+      <button class="btn" (click)="logout()">Logout</button>
     </header>
     <div id="page" [@moveInLeft]="state">
-      <h2>{{name.auth.displayName}}!</h2>
+      <h5>Welcome  {{memberService.currentUser}}</h5>
     </div>
 </div>

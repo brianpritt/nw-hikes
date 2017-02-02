@@ -15,8 +15,12 @@ import { MemberService } from '../member.service';
 export class OtherComponent implements OnInit {
   name: any;
   state: string = '';
+  member;
 
-  constructor(public af: AngularFire,private router: Router, private memberService: MemberService) {
+  constructor(
+    public af: AngularFire,
+    private router: Router,
+    private memberService: MemberService) {
 
     this.af.auth.subscribe(auth => {
       if(auth) {
@@ -33,6 +37,10 @@ export class OtherComponent implements OnInit {
 
 
   ngOnInit() {
+    // this.memberService.currentUser[0].subscribe(data=> {
+    //   this.member = data;
+    //   console.log(this.member);
+    // })
   }
 
 }

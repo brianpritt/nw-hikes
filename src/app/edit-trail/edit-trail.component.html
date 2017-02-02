@@ -1,57 +1,58 @@
 <div class="edit-form">
-  <h2>Edit trail</h2>
-  <div class="row">
-    <div class="input-field col s12">
-      <label>Edit trail name</label><br>
-      <input (selectedTrail)="selectedTrail.name">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail elevation gain</label><br>
-      <input (selectedTrail)="selectedTrail.elevation_gain">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail region</label><br>
-      <input (selectedTrail)="selectedTrail.region">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail latitude</label><br>
-      <input (selectedTrail)="selectedTrail.lat">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail longitude</label><br>
-      <input (selectedTrail)="selectedTrail.long">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail intro teaser</label><br>
-      <input (selectedTrail)="selectedTrail.intro">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail description</label><br>
-      <input (selectedTrail)="selectedTrail.description">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail length</label><br>
-      <input (selectedTrail)="selectedTrail.length">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail difficulty</label><br>
-      <input (selectedTrail)="selectedTrail.difficulty">
-    </div>
-
-    <div class="input-field col s12">
-      <label>Edit trail picture URL</label><br>
-      <input (selectedTrail)="selectedTrail.picture">
-    </div>
-
-    <button class="btn" (click)="beginUpdateTrail(selectedTrail)">Update</button>
-    <button class="btn" (click)="deleteTrail(selectedTrail)">Delete</button>
+<h2>Edit trail</h2>
+<div class="row" *ngIf=(trailService.trailToSend)>
+  <div class="input-field col s12">
+    <label>Edit trail name</label><br>
+    <input [(ngModel)]="serviceTrail.name">
   </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail elevation gain</label><br>
+    <input [(ngModel)]="serviceTrail.elevation_gain">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail region</label><br>
+    <input [(ngModel)]="serviceTrail.region">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail latitude</label><br>
+    <input [(ngModel)]="serviceTrail.lat">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail longitude</label><br>
+    <input [(ngModel)]="serviceTrail.long">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail intro teaser</label><br>
+    <input [(ngModel)]="serviceTrail.intro">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail description</label><br>
+    <input [(ngModel)]="serviceTrail.description">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail length</label><br>
+    <input [(ngModel)]="serviceTrail.length">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail difficulty</label><br>
+    <input [(ngModel)]="serviceTrail.difficulty">
+  </div>
+
+  <div class="input-field col s12">
+    <label>Edit trail picture URL</label><br>
+    <input [(ngModel)]="serviceTrail.picture">
+  </div>
+
+  <button class="btn" (click)="beginUpdateTrail(serviceTrail)">Update</button>
+  <button class="btn" (click)="deleteTrail(serviceTrail)">Delete</button>
+
+</div>
 </div>

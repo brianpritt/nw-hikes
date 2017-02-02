@@ -5,6 +5,7 @@ import { AngularFireAuth } from "angularfire2/angularfire2";
 import { CanActivate, Router } from '@angular/router';
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Rx";
+import { MemberService} from './member.service';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
@@ -12,7 +13,7 @@ import 'rxjs/add/operator/take';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-    constructor(private auth: AngularFireAuth, private router: Router) {}
+    constructor(private auth: AngularFireAuth, private router: Router,private memberService: MemberService) {}
 
     canActivate(): Observable<boolean> {
       return Observable.from(this.auth)
@@ -22,6 +23,7 @@ export class AuthGuard implements CanActivate {
       if
         (!authenticated) this.router.navigate([ '/login-email' ]);
       })
+
     }
 
 }

@@ -5,6 +5,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 @Injectable()
 export class TrailService {
   trails: FirebaseListObservable<any[]>;
+  trailToSend;
 
   constructor(private angularFire: AngularFire) {
     this.trails = angularFire.database.list('trails');
@@ -23,8 +24,9 @@ export class TrailService {
   }
 
   updateTrail(localUpdatedTrail) {
-    console.log(localUpdatedTrail.$key)
-    var trailInFirebase = this.getTrailById(localUpdatedTrail.$key);
+    console.log(localUpdatedTrail);
+    console.log(this.trailToSend.$key)
+    var trailInFirebase = this.getTrailById(this.trailToSend.$key);
     console.log(trailInFirebase);
     trailInFirebase.update({name: localUpdatedTrail.name,
                             elevation_gain: localUpdatedTrail.elevation_gain,
@@ -41,5 +43,9 @@ export class TrailService {
   deleteTrail(trailToDelete) {
     var trailInFirebase = this.getTrailById(trailToDelete.$key);
     trailInFirebase.remove();
+  }
+  sendATrailObject(trail){
+    this.trailToSend = trail;
+    console.log(this.trailToSend)
   }
 }
