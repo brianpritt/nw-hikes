@@ -38,7 +38,7 @@ export class HikeDetailsComponent implements OnInit {
       this.x = this.trailToDisplay.long;
       this.y = this.trailToDisplay.lat;
       this.mapService.initializeMap(this.x,this.y,13);
-      this.trailService.sendATrailObject(data);
+      this.trailService.sendTrailObject(data);
     });
 
   }

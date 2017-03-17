@@ -12,7 +12,10 @@
     "tests"
   ],
   "authors": [
-    "Steve Burton <stevevburton@gmail.com>"
+    "Steve Burton <stevevburton@gmail.com>",
     "Brian Pritt <brianpritt@gmail.com>"
-  ]
+  ],
+  "dependencies":{
+    "jquery" : "3.1.1"
+  }
 }
